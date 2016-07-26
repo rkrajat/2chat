@@ -1,0 +1,21 @@
+<div id='main' style="width: 100%;height:90%" ng-show="authenticated">
+	<div class="chatArea" style="height: 90%;width:100%;margin-left: 17px;">
+		<div style="color: black;width: 90%"><h3 align="center">{{current_chat_user}}</h3></div>
+        <div class="messages" style="height: 83%;width:90%">
+            <div class="msg_push_old"></div>
+            <div class="msg_push_new"></div>
+        </div>
+    </div>
+	<nav class="navbar-fluid navbar-fixed-bottom" style="padding-bottom:60px;">
+		<div class="container">
+			<form action="" name="inputForm" id="inputForm">
+				 <div class='typing'></div>
+	   			 <input class="inputMessage" id="inputMessage" rows="1" placeholder="Type here..." style="margin-left: 16px"></input>
+	   			 <a ng-click="postChat()" wrap="" style="width:20%;height:100%">
+	   			 	<div class="glyphicon glyphicon-send pull-right" style="cursor: pointer;padding-top: 9px;margin-left: 0px;margin-right: 66px;"></div>
+	   			 </a>
+   			 </form>
+		</div>
+	</nav>
+</div>
+
