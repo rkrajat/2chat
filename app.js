@@ -18,7 +18,7 @@ var bodyParser = require('body-parser');
 
 var mongoose = require('mongoose');
 
-var dbURI = "mongodb://localhost:27017/2chat";
+var dbURI = 'mongodb://2chatadmin:pwd2chat@ds023495.mlab.com:23495/2chat';//"mongodb://localhost:27017/2chat";
 mongoose.connect(dbURI);
 
 var model = require('./model/model');
