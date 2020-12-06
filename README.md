@@ -1,2 +1,2 @@
 # 2chat
-A Chat App built by 2 People
+A noob Chat App built using MEAN stack and Socket.io
