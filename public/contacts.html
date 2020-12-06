@@ -1,0 +1,23 @@
+<p class="err">{{error_message}}</p>
+
+<div class="content container-fluid bootstrap snippets" ng-show="authenticated">
+	<h6>Online</h6>
+	<div ng-repeat="contact in contacts" class="row row-broken">
+		<div class="col-sm-3 col-xs-12" style="height:12%;overflow: hidden;width: 100%">
+	          <div class="col-inside-lg decor-default chat" style="overflow: hidden; outline: none;" tabindex="5000">
+	            <div class="chat-users">
+	                <div class="user">
+	                    <div class="avatar">
+	                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAHcAdwMBIgACEQEDEQH/xAAaAAEAAwEBAQAAAAAAAAAAAAAAAwQFAgEH/8QAMxAAAgIBAQUGBAQHAAAAAAAAAAECAxEEEiExQVETIjJhcaEFFDOBI0JSkTRTYnKCorH/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAXEQEBAQEAAAAAAAAAAAAAAAAAAREh/9oADAMBAAIRAxEAPwD6sADSAAAA6hCVjxCLbLVehk/HPHkhopg0loqVxTfqzr5Sj9HuyarLBpS0VT4bUfRkFminHfCSl5cy6KgPZRcXiSafmeBAAAAAAAAAs6bSuzvTyo+7Gj0/aPbku6uXVmkS1XMIRhHZikkdAo6zUvLrreEuLILFmpqrbTllrkiP56r9MzOBcGvXdXZ4JJ+RIYqbTTTw1zNLSajtY7MvGvcglsrhbHE0mZ2o08qXlb4dehqHkkmsNZTAxQT6qjsZ7t8XwIDSAAAHVcHZOMFzZyXPh0MuU3y3IUXYRUIqMeCWDoAyqLUWdnTKS443GSaPxD6H+SM4sAAFQO6puuyMlyZwANtPIOKvpQzxwjsyqO6tW1uL+zMmSabT4pm0Zuvhs3bS4SRYKwAKgaehWNOn1bZmGro/4aH3/wCkqpgAQRaqDsomlxxlGSbZm6yjs57UV3JezLBWABUDquLnOMVzZyaGhocV2k13nw8kKq0lhYPQDIFP4ivw4vpIuFX4h9Bf3IDOABpA0tBLNCXR4M0t/D7MTlB/m3oVWgDi6fZ1ynjOORnPVXP8+PRIyNQidlUpdm5RbfIzJW2T8U5P7nBcF27Q726pfZkS0d2eEV9zqrWTgsTW0vclevjjdW8+o6PadJCt7Vj2mv2RPXfXY8RkmzOu1Nlqw90eiIRg2wZEbrIbozlj1JI6u6Ly3tLo0MGmU/iMu5CPV5LcXmKfDKM3XT272lwisEgrgA0gdQk4SUlxTOQBsVzjdWmuDW9GXqKnTY48uT8jvS39jLD8D4+ReuqjfWsNZ4xkRWUDqcJQk4yWGjkqAAAAAAT6SntbMvwx3vzI6a5Wz2Yr1fQ04qvTU8cRXF9SWhqLVVU5c+S8zKeW8viSai13Ty9yXBEQgAAoAAATafUSpeOMOhCANN9jq4cd6/dFS3SWV+Fba6ogTaeU2n5FivWWx8WJLzIqvhp4a3nhd+crl9SrP7MfMab+T/qgKaTbwk2/IsU6Oc2nPux9yR62MV+HVj13ENmrtnz2V/SBcc6dNHZXH9K4so3XTul3ty5Ii555gYgACgAAAAAAAAAAAAAAAAAAAAAAAD//2Q==" alt="User name">
+	                    <div class="status offline"></div>
+	                    </div>
+	                    <div class="name" style="padding-top: 10px;">{{contact.name}}
+	                    <a ng-click="newChat(contact.name)"><div class="glyphicon glyphicon-plus pull-right"></div></a>
+						</div>
+	                    	                    <!-- <div class="mood">User mood</div> -->
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</div>

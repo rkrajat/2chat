@@ -1,0 +1,68 @@
+
+<!-- saved from url=(0031)http://localhost:3000/#/newChat -->
+<html ng-app="2Chat" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+		<title>2Chat</title>
+		<script src="./2Chat_files/angular.min.js"></script>
+		<script src="./2Chat_files/angular-route.js"></script>
+		<script src="./2Chat_files/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+		<script src="./2Chat_files/bootstrap.min.js"></script>
+		<script src="./2Chat_files/socket.io-1.2.0.js"></script>
+   		 <script src="./2Chat_files/jquery-1.11.1.js"></script>
+		
+		<script type="text/javascript" src="./2Chat_files/2chat_main.js"></script>
+		 
+		<link rel="stylesheet" type="text/css" href="./2Chat_files/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="./2Chat_files/style.css">
+		<link rel="stylesheet" type="text/css" href="./2Chat_files/animate.css">
+	</head>
+	<body>
+		<div id="main" class="container">
+			<nav class="navbar-fluid navbar-inverse navbar-fixed-top">
+				<div class="container">
+						<a class="navbar-brand" href="http://localhost:3000/#"> 2Chat </a>
+						<p class="navbar-text"> To Chat with People</p>
+						<ul class="nav navbar-nav navbar-right ng-hide" ng-hide="authenticated">
+					      <li><a href="http://localhost:3000/#/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+					      <li><a href="http://localhost:3000/#/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+					    </ul>
+
+						<p class="navbar-right navbar-text ng-binding">Signed in as Prakash Va</p>
+
+					    <p class="navbar-right navbar-text" style="cursor: pointer" ng-show="authenticated">
+					    	<a ng-click="signout()">
+					          <span class="glyphicon glyphicon-log-out"></span> Log out
+					        </a>
+				        </p>
+				</div>
+			</nav>
+			<div class="col-md-offset-2 col-md-8">
+				<!-- ngView: --><div ng-view="" class="ng-scope"><div id="main" class="ng-scope" ng-show="authenticated">
+	<div class="chatArea" style="height: 80%">
+		<div style="color: gray" class="ng-binding">Prakash</div>
+        <div class="messages" style="height: 90%;width:100%">
+            <div class="msg_push_old"></div>
+            <div class="msg_push_new"></div>
+        </div>
+    </div>
+	<nav class="navbar-fluid navbar-fixed-bottom" style="padding-bottom:60px;">
+		<div class="container">
+			 <div class="typing"></div>
+   			 <input class="inputMessage" rows="1" placeholder="Type here..." style="margin-left: 16px">
+   			 <a ng-click="postChat()" wrap="" style="width:20%">
+   			 	<div class="glyphicon glyphicon-send pull-right" style="cursor: pointer;padding-top: 9px"></div>
+   			 </a>
+		</div>
+	</nav>
+</div></div>
+			</div>
+		</div>
+		<div id="main" class="container" ng-show="authenticated">
+			<nav class="navbar-fluid navbar-inverse navbar-fixed-bottom">
+				<div class="container">
+						<a href="http://localhost:3000/#/contacts"><p class="navbar-text navbar-left">Contacts</p></a>
+						<a href="http://localhost:3000/#/chats"><p class="navbar-text navbar-right">Chats</p></a>
+				</div>
+			</nav>
+		</div>
+	
+</body></html>

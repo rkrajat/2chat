@@ -1,0 +1,50 @@
+<html ng-app="2Chat">
+	<head>
+		<title>2Chat</title>
+		<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+		
+		<script type="text/javascript" src="javascripts/2chat_main.js"></script>
+		 
+		<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+		<link rel="stylesheet" type="text/css" href="stylesheets/animate.css" />
+	</head>
+	<body>
+		<div id='main' class="container">
+			<nav class="navbar-fluid navbar-inverse navbar-fixed-top">
+				<div class="container">
+						<a class="navbar-brand" href="#"> 2Chat </a>
+						<p class="navbar-text"> To Chat with People</p>
+						<ul class="nav navbar-nav navbar-right" ng-hide="authenticated">
+					      <li><a href="#/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+					      <li><a href="#/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+					    </ul>
+
+						<p class="navbar-right navbar-text">Signed in as {{current_user}}</p>
+
+					    <p class="navbar-right navbar-text" style="cursor: pointer" ng-show="authenticated">
+					    	<a ng-click="signout()">
+					          <span class="glyphicon glyphicon-log-out"></span> Log out
+					        </a>
+				        </p>
+				</div>
+			</nav>
+			<div class="">
+				<div ng-view>
+				</div>
+			</div>
+		</div>
+		<div id='main' class="container" ng-show="authenticated">
+			<nav class="navbar-fluid navbar-inverse navbar-fixed-bottom">
+				<div class="container">
+						<a href="#/contacts"><p class="navbar-text navbar-left">Contacts</p></a>
+						<a href="#/chats"><p class="navbar-text navbar-right">Chats</p></a>
+				</div>
+			</nav>
+		</div>
+	</body>
+</html>
